@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">SparkApplication</string>
+    <string name="app_name">Spark Application</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="lblPointsAndBadges">POINTS AND BADGES</string>
+    <string name="lblMyPoints">My Points</string>
+
+    <string name="lblMyBadges">My Badges</string>
+    <string name="lblSnippet">  Snippet</string>
+    <string name="lblSPSocial">  SPSocial</string>
+    <string name="lblCancel">CANCEL</string>
+    <string name="lblContinue">CONTINUE</string>
+
 </resources>

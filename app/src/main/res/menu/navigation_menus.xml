@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_home"
+        android:checked="true"
+        android:title="HOME" />
+    <item
+        android:id="@+id/nav_space"
+        android:title="SPACE" />
+    <item
+        android:id="@+id/nav_createNew"
+        android:title="CREATE NEW" />
+    <item
+        android:id="@+id/nav_caseStudies"
+        android:title="CASE STUDIES" />
+    <item
+        android:id="@+id/nav_snippet"
+        android:title="SNIPPETS" />
+    <item
+        android:id="@+id/nav_spSocial"
+        android:title="SPSOCIAL" />
+    <item
+        android:id="@+id/nav_newsLetter"
+        android:title="NEWSLETTER" />
+    <item
+        android:id="@+id/nav_announcement"
+        android:title="ANNOUNCEMENT" />
+    <item
+        android:id="@+id/nav_survey"
+        android:title="SURVEY" />
+    <item
+        android:id="@+id/nav_polls"
+        android:title="POLL'S" />
+    <item
+        android:id="@+id/nav_competitions"
+        android:title="COMPETITIONS" />
+    <item
+        android:id="@+id/nav_spway"
+        android:title="SPWAY" />
+    <item
+        android:id="@+id/nav_projectClosure"
+        android:title="PROJECT CLOSURE" />
+    <item
+        android:id="@+id/nav_pointsAndBadges"
+        android:title="POINTS AND BADGES" />
+    <item
+        android:id="@+id/nav_traineeProjects"
+        android:title="TRAINEE PROJECTS" />
+    <item
+        android:id="@+id/nav_myDrafts"
+        android:title="MY DRAFTS" />
+    </group>
+</menu>

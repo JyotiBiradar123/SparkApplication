@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/my_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <include
+                            android:id="@+id/toolbar"
+                            layout="@layout/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                        <FrameLayout
+                            android:id="@+id/fragment_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/toolbar"
+                            />
+                        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/floationButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/ic_dialog_email"
+                            android:layout_gravity="bottom|end"
+                            app:elevation="6dp"
+                            app:pressedTranslationZ="12dp"/>-->
+                </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            android:background="@color/darkBlue"
+            android:fitsSystemWindows="true"
+            app:itemIconTint="@color/darkBlue2"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/navigation_menus" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createPointANdBadges_floater"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/addition"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            app:fabCustomSize="50dp"
+            app:fabSize="normal"
+            app:maxImageSize="50dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            app:backgroundTint="@null"
+            app:elevation="0dp"
+            android:elevation="0dp"
+            />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
