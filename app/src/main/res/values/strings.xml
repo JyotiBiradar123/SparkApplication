@@ -11,5 +11,6 @@
     <string name="lblSPSocial">  SPSocial</string>
     <string name="lblCancel">CANCEL</string>
     <string name="lblContinue">CONTINUE</string>
+    <string name="lblViewAll">View All</string>
 
 </resources>

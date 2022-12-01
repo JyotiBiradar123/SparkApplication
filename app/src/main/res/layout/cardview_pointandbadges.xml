@@ -37,6 +37,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -127,6 +128,25 @@
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                />
+            <com.example.sparkapplication.sparkandroidapplication.SimpleClasses.MyBadgesRecycleViewWithArrows
+                android:id="@+id/myBadgesRecycleView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/txtlblMyBadges" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lblViewAll"
+                android:textSize="@dimen/_8ssp"
+                android:textAllCaps="false"
+                android:background="@drawable/corner_round_button"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnRedemptionBenefits"
+                app:layout_constraintStart_toStartOf="@+id/myBadgesRecycleView"
+                app:layout_constraintEnd_toEndOf="@+id/myBadgesRecycleView"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>

@@ -50,7 +50,7 @@
         android:id="@+id/nav_traineeProjects"
         android:title="TRAINEE PROJECTS" />
     <item
-        android:id="@+id/nav_myDrafts"
-        android:title="MY DRAFTS" />
+        android:id="@+id/nav_myArticles"
+        android:title="MY ARTICLES" />
     </group>
 </menu>

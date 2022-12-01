@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/user_profile"
                 android:padding="@dimen/_8sdp"
+                android:background="@drawable/circular_imageview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

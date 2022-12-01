@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="@dimen/_50sdp"
+        android:background="@drawable/circular_shape"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/user_profile"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="@dimen/_12ssp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="MyBadgesName"
+        android:textColor="#5C0301"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIcon"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewIcon"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

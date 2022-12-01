@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,9 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sparkapplication.R;
 import com.example.sparkapplication.sparkandroidapplication.Home.HomeFragment;
+import com.example.sparkapplication.sparkandroidapplication.SimpleClasses.MyBadgesRecycleViewWithArrows;
 import com.example.sparkapplication.sparkandroidapplication.Space.SpaceFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -26,7 +29,7 @@ public class LandingActivity extends AppCompatActivity implements NavigationView
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-    ImageView ivNavigationIcon,ivViewPointAndBadges;
+    ImageView ivNavigationIcon,ivViewPointAndBadges,ivProfileIcon;
     FloatingActionButton createPointANdBadges_floater;
 
 
@@ -45,6 +48,13 @@ public class LandingActivity extends AppCompatActivity implements NavigationView
             @Override
             public void onClick(View view) {
                 openPointAndBadgesDialog();
+            }
+        });
+        ivProfileIcon=findViewById(R.id.ivProfileIcon);
+        ivProfileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openProfilePicDialog();
             }
         });
         createPointANdBadges_floater=(FloatingActionButton)findViewById(R.id.createPointANdBadges_floater);
@@ -67,6 +77,14 @@ public class LandingActivity extends AppCompatActivity implements NavigationView
         View dialogView= inflater.inflate(R.layout.cardview_pointandbadges, null);
         dialogBuilder.setView(dialogView);
         ImageView imsgCross=(ImageView)dialogView.findViewById(R.id.imgCross);
+        MyBadgesDataClass[] myBadgesDataClasses=new MyBadgesDataClass[]{
+                new MyBadgesDataClass("FY 20-21",R.drawable.user_profile),
+                new MyBadgesDataClass("SY 21-22",R.drawable.user_profile),
+                new MyBadgesDataClass("TY 22-23",R.drawable.user_profile)
+        };
+        MyBadgesRecycleViewWithArrows recyclerView = (MyBadgesRecycleViewWithArrows)dialogView.findViewById(R.id.myBadgesRecycleView);
+        MyBadgesRecycleViewAdapter adapter = new MyBadgesRecycleViewAdapter(myBadgesDataClasses);
+        recyclerView.setAdapter(adapter);
         AlertDialog alertDialog = dialogBuilder.create();
         imsgCross.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +93,9 @@ public class LandingActivity extends AppCompatActivity implements NavigationView
             }
         });
         alertDialog.show();
+    }
+    public void openProfilePicDialog(){
+
     }
     public void setDrawerLayout(NavigationView navigationView){
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
